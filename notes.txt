@@ -1,0 +1,42 @@
+April 12, 2023:
+
+Here are the files for the bookstore. There are 5. 
+
+authors.tsv
+compsci.tsv
+mystery.tsv
+romance.tsv
+scifi.tsv
+
+The authors file is a tab_separated_values. It is pretty simple, the fields are
+
+  Name, aliases, dates (birth/death), general information
+
+
+The actual books are in the files 
+
+  compsci.tsv, scifi.tsv, romance.tsv, mystery.tsv
+
+
+These are tab_separated_values. It is pretty simple, the fields are
+
+author, title, price (new), usedprice1, usedprice2, usedprice3, publisher, date, 
+  qty_new, qty_used1, qty_used2, qty_used3, language, isbn, isbn13, cover, pages, 
+  description, misc
+
+The used prices correspond ot the used quantities. The "price" is the new book
+price. There are 3 "covers", hardcover, paperback, audiobook. Used paperbacks
+only have two prices and used hardcover have 3. For the audiobooks there are
+no used. BUT the fields are ALL THE SAME.
+
+Most of the fields have values, but some may not. You might want to look at the
+files before making any really serious decisions about allowing NULLs or
+defualts. If there were no values for a field I output \N. After testing, this
+is LOADed as NULL. If that is a problem, you might have to figure out a way
+around it. 
+
+If there are any questions, ask.
+
+Enjoy.
+
+
